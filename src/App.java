@@ -1,27 +1,27 @@
-import java.text.NumberFormat;
-
+import java.util.Scanner;
 
 public class App {
+    // reading input
     public static void main(String[] args) throws Exception {
-        // constants
+        // to get inputs
+        Scanner scanner = new Scanner(System.in);
 
-        final float PI = 3.14F; //example of declarations of constants
+        // for strings
+        System.out.print("Entrer your full name ");
+        String fullName = scanner.nextLine().trim();
+        System.out.println(fullName);
 
-        String x = "1";
+        // numbers
+        System.out.print("Give your Age ");
+        byte age1 = scanner.nextByte();
+        System.out.println("Give the age of your wife");
+        byte age2 = scanner.nextByte();
+        System.out.println("Your are " + age1 + " And your wife are " + age2);
 
-        int y = Integer.parseInt(x); //the same method exsist for byte, short, int, long, float, double or chart and string
-        // arithmatic expressions
-        double result = (double)10 / (double)3; // coasting
+        // for strings
+        System.out.print("Entrer your name ");
+        String name = scanner.next();
+        System.out.println(name);
 
-        System.out.println(result);
-
-
-        // formatting number
-
-        NumberFormat percent = NumberFormat.getPercentInstance();
-
-        String resultCurrency = percent.format(0.891);
-
-        System.out.println(resultCurrency);
     }
 }
